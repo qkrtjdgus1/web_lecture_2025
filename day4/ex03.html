@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Radio Button Sample </h1>
+
+    <div>
+        <input type = "radio" name = "fruit" value = "사과"> 사과
+    </div>
+    <div>
+        <input type = "radio" name = "fruit" value = "바나나"> 바나나
+    </div>
+    <div>
+        <input type = "radio" name = "fruit" value = "포도"> 포도
+    </div>
+
+    <button id = "btn-select"> 확인 </button>
+    <p>
+        결과 : <span id = "output-result">  </span>
+    </p>
+
+    <script>
+        var btnSelect = document.getElementById("btn-select")
+        var outputResult = document.getElementById("output-result")
+
+        btnSelect.addEventListener('click' , ()=>{
+        var selectItem = document.querySelector("input[name = fruit]:checked")
+
+        console.log(selectItem)
+
+        outputResult.innerText = selectItem.value
+        })
+    </script>
+
+
+
+
+
+    <div>
+        <input type = "radio" name = "bestfootballteam" value = "레알"> 레알
+    </div>
+    <div>
+        <input type = "radio" name = "bestfootballteam" value = "바르샤"> 바르샤
+    </div>
+    <div>
+        <input type = "radio" name = "bestfootballteam" value = "첼시"> 첼시
+    </div>
+    <div>
+        <input type = "radio" name = "bestfootballteam" value = "파리"> 파리
+    </div>
+
+    <button id = "btn-select-2"> 확인 </button>
+    <p>
+        결과 : <span id = "output-result-2">  </span>
+    </p>
+
+    <script>
+        var btnSelect2 = document.getElementById("btn-select-2")
+        var outputResult2 = document.getElementById("output-result-2")
+
+        btnSelect2.addEventListener('click' , ()=>{
+        var selectItem2 = document.querySelector("input[name = bestfootballteam]:checked")
+
+        console.log(selectItem2)
+
+        outputResult2.innerText = selectItem2.value
+        })
+    </script>
+
+</body>
+</html>
