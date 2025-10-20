@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- 문서의 인코딩을 UTF-8로 설정 (한글 깨짐 방지) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 반응형 화면 설정 -->
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Radio Button Sample </h1>
+
+    <!-- fruit 그룹의 라디오 버튼 3개 생성 -->
+    <div>
+        <input type="radio" name="fruit" value="사과"> 사과
+    </div>
+    <div>
+        <input type="radio" name="fruit" value="바나나"> 바나나
+    </div>
+    <div>
+        <input type="radio" name="fruit" value="포도"> 포도
+    </div>
+
+    <!-- 사용자가 클릭할 확인 버튼 -->
+    <button id="btn-select"> 확인 </button>
+
+    <!-- 결과를 출력할 영역 -->
+    <p>
+        결과 : <span id="output-result"> </span>
+    </p>
+
+    <script>
+        // id가 "btn-select"인 버튼 요소를 변수에 저장
+        var btnSelect = document.getElementById("btn-select")
+        // id가 "output-result"인 <span> 요소를 변수에 저장
+        var outputResult = document.getElementById("output-result")
+
+        // 버튼 클릭 시 실행될 이벤트 리스너 등록
+        btnSelect.addEventListener('click', ()=>{
+            // 'fruit' 그룹에서 선택(checked)된 라디오 버튼 요소를 선택
+            var selectItem = document.querySelector("input[name=fruit]:checked")
+
+            // 선택된 input 요소 자체를 콘솔에 출력 (디버깅용)
+            console.log(selectItem)
+
+            // 선택된 요소의 value 속성값(사과, 바나나, 포도 중 하나)을 결과 영역에 표시
+            outputResult.innerText = selectItem.value
+        })
+    </script>
+
+
+
+
+    <!-- 또 다른 라디오 그룹: bestfootballteam -->
+    <div>
+        <input type="radio" name="bestfootballteam" value="레알"> 레알
+    </div>
+    <div>
+        <input type="radio" name="bestfootballteam" value="바르샤"> 바르샤
+    </div>
+    <div>
+        <input type="radio" name="bestfootballteam" value="첼시"> 첼시
+    </div>
+    <div>
+        <input type="radio" name="bestfootballteam" value="파리"> 파리
+    </div>
+
+    <!-- 두 번째 확인 버튼 -->
+    <button id="btn-select-2"> 확인 </button>
+
+    <!-- 두 번째 결과 출력 영역 -->
+    <p>
+        결과 : <span id="output-result-2"> </span>
+    </p>
+
+    <script>
+        // 두 번째 버튼과 출력 영역 요소를 각각 변수에 저장
+        var btnSelect2 = document.getElementById("btn-select-2")
+        var outputResult2 = document.getElementById("output-result-2")
+
+        // 버튼 클릭 이벤트 리스너 등록
+        btnSelect2.addEventListener('click', ()=>{
+            // 'bestfootballteam' 그룹에서 선택된 라디오 버튼을 가져옴
+            var selectItem2 = document.querySelector("input[name=bestfootballteam]:checked")
+
+            // 선택된 input 요소를 콘솔에 출력 (확인용)
+            console.log(selectItem2)
+
+            // 선택된 팀의 value 값을 결과 영역에 출력
+            outputResult2.innerText = selectItem2.value
+        })
+    </script>
+
+</body>
+</html>
