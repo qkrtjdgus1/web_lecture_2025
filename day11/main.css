@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    background-color: blue;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-family: 'Galmuri14';
+
+    flex-direction: column;
+
+    height: 100vh;
+
+}
+
+@font-face {
+    font-family: 'Galmuri14';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2506-1@1.0/Galmuri14.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+header {
+    display: flex;
+    padding: 16px;
+    /*background-color: yellow;
+    color: black;*/
+    justify-content: flex-end;
+}
+
+
+footer {
+    display: flex;
+    padding: 16px;
+    /*background-color: black;
+    color: white;*/
+}
+
+main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 64px;
+}
+
+.menu-item {
+    font-size: 32px;
+}
+
+.copyrignt-header {
+    font-size: 8px;
+}
+
+.copyrignt-footer {
+    font-size: 8px;
+}
