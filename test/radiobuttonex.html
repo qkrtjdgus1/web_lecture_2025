@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3> Radio Button Sample </h3>
+
+    <div>
+        <input type = "radio" name = "fruit" value = "사과" checked> 사과
+    </div>
+    <div>
+        <input type = "radio" name = "fruit" value = "바나나"> 바나나
+    </div>
+    <div>
+        <input type = "radio" name = "fruit" value = "포도"> 포도
+    </div>
+
+    <button id = "radioBtn"> 확인 </button>
+    <p>
+        결과 : <span id = "radioResult">  </span>
+    </p>
+
+    <script>
+        const radioBtn = document.getElementById("radioBtn")
+        const radioResult = document.getElementById("radioResult")
+
+        radioBtn.addEventListener('click' , function() {
+        // name이 'fruit인 라디오 버튼 중 :checked(선택된) 요소의 값을 가져옴'
+        var selectItem = document.querySelector("input[name = fruit]:checked")
+
+        console.log(selectItem)
+
+        outputResult.innerText = selectItem.value
+        })
+    </script>
+
+</body>
+</html>
